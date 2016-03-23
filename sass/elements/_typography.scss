@@ -1,0 +1,44 @@
+/*html{
+	overflow:hidden;
+	height:100%;
+	width:100%;
+}*/
+
+
+@font-face {
+font-family: 'Helvetica 45 Light';
+font-style: normal;
+font-weight: normal;
+src: local('../fonts/Helvetica Neue LT Std 45 Light'), url('../fonts/HelveticaNeueLTStd Lt.woff') format('woff');
+}
+
+$basefont:'Helvetica 45 Light';
+
+body{
+	font-family: $basefont;
+	}
+
+	h1 {
+	font-family: $basefont;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+h3 {
+	font-family: $basefont;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
+}
+p {
+	font-family: $basefont;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}

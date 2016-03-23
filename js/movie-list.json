@@ -1,0 +1,129 @@
+[{
+
+     "EventId": "ET0000001",
+     
+     "EventName": "Fitoor",
+
+     "Language" : ["Hindi" , "English"],
+        
+     "Genre"    : ["Action", "Romance", "Adventure"], 
+
+     "RunTime"  : "R | 1h 40min",
+     
+     "UserVotes": "66,000",
+     
+     "likes"    : "96%" 
+
+}, {
+
+    "EventId": "ET0000002",
+     
+     "EventName": "Loveshuda",
+
+     "Language" : ["Hindi"],
+        
+     "Genre"    : ["Romance", "Adventure"], 
+
+     "RunTime"  : "U | 1h 30min",
+     
+     "UserVotes": "36,000",
+     
+     "likes"    : "56%" 
+
+ }, {
+
+    "EventId": "ET0000003",
+     
+     "EventName": "Rythm",
+
+     "Language" : ["Hindi" , "Telgu"],
+        
+     "Genre"    : ["Action", "Romance"], 
+
+     "RunTime"  : "R | 1h 10min",
+     
+     "UserVotes": "76,000",
+     
+     "likes"    : "62%" 
+
+ }, {
+
+    "EventId": "ET0000004",
+     
+     "EventName": "Kung Fu Panda",
+
+     "Language" : ["English"],
+        
+     "Genre"    : ["Action",  "Adventure"], 
+
+     "RunTime"  : "R | 1h 40min",
+     
+     "UserVotes": "90,000",
+     
+     "likes"    : "90%" 
+
+ }, {
+
+    "EventId": "ET0000005",
+     
+     "EventName": "Vvitch",
+
+     "Language" : ["English"],
+        
+     "Genre"    : ["Action", "Adventure"], 
+
+     "RunTime"  : "R | 1h",
+     
+     "UserVotes": "80,000",
+     
+     "likes"    : "88%" 
+
+ }, {
+
+    "EventId": "ET0000006",
+     
+     "EventName": "Tintin",
+
+     "Language" : ["Tamil" , "English"],
+        
+     "Genre"    : ["Action", "Romance", "Adventure"], 
+
+     "RunTime"  : "U | 1h 40min",
+     
+     "UserVotes": "66,000",
+     
+     "likes"    : "96%" 
+
+ }, {
+
+    "EventId": "ET0000007",
+     
+     "EventName": "April 2001",
+
+     "Language" : ["Kanada" , "Hindi"],
+        
+     "Genre"    : ["Romance", "Adventure"], 
+
+     "RunTime"  : "R | 1h 10min",
+     
+     "UserVotes": "61,000",
+     
+     "likes"    : "46%" 
+
+ }, {
+
+    "EventId": "ET0000008",
+     
+     "EventName": "Bajirao Mastani",
+
+     "Language" : ["Hindi" , "Marathi"],
+        
+     "Genre"    : ["Action", "Romance", "Adventure"], 
+
+     "RunTime"  : "U | 2h 10min",
+     
+     "UserVotes": "89,000",
+     
+     "likes"    : "90%" 
+
+ }]

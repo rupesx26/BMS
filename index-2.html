@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie List</title>
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="movie list" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+<div class="container">
+	<img src="movies.png" class="img-responsive" />
+</div>
+
+ <div class="movies-blocks" style="display: none;"></div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src="js/movie-list.json"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var jsonString = JSON.stringify(data);
+	 	jsonData = JSON.parse(jsonString);
+	 for(var jData=0;jData<data.length;jData++){
+        var obj = data[jData];
+        var	parentDiv = document.createElement( "div" )
+        $(parentDiv).attr("class", "movie-details");
+        for(var key in obj){
+            var attrName = key;
+            var attrValue = obj[key];
+            console.log(attrName, attrValue);
+
+        var	newDiv = document.createElement( "div" )
+        	$(newDiv).attr("class", attrName);
+        	$(newDiv).text(attrValue);
+        	$(parentDiv).append( newDiv );  
+        }
+       
+        $(".movies-blocks").append(parentDiv);
+    }
+    
+ });
+
+
+</script>
+</body>
+</html>

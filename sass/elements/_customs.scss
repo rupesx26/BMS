@@ -1,0 +1,179 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &:after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    &:before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+
+}
+
+
+.bgColor{
+	background-color:color("colorsPalette", "clr-4");
+}
+
+.shadow{
+	@include box-shadow( (rgba(153, 153, 153, 0.4) 0 0 25px));
+}
+
+.shadow1x{
+	@include box-shadow( (rgba(153, 153, 153, 0.4) 0 0 7px));
+}
+
+.shadow2x{
+	@include box-shadow( (rgba(0, 0, 0, 0.2) 0 1px 2px));
+}
+
+.roundBox{
+	@include border-radius(2px,2px);
+}
+
+.box-std{
+	padding:15px;
+}
+
+.img-responsive{
+max-width:100%;
+}
+
+.moviePoster{
+	text-align:center;
+	&.lg{
+		width:235px;
+	}
+	&.md{
+		width:145px;
+	}
+	&.sm{
+		width:72px;
+	}
+}
+
+.font10{
+	font-size:10px;
+}
+
+
+.startRating, .movieTime, .movieLanguage, .votes{
+	@extend .font10;
+}
+
+.movieLanguage, .startRating, .movieTime{
+	margin:16px 0 0;
+}
+
+.movieCaret{
+	position:relative;
+	min-height:248px;
+	.bookNowBtn{
+		position:absolute;
+		right:18px;
+		bottom:20px;
+	}
+}
+.movieCast{
+	text-align:center;
+	padding:5px 0;
+	span{display: inline-block; margin: 0 0 0 -12px;
+		&:first-child{ margin:0;}
+	}
+}
+
+.movieVotes{
+	position:absolute;
+	right:0;
+	top:0;
+	img{  vertical-align: middle;}
+	span{font-size:15px; color:color("colorsPalette", "clr-1");}
+	.votes {padding:5px 0 0;}
+}
+
+.frndsGoing{
+	text-align:center;
+	font-size:11px;
+	padding:2px 0 8px;
+}
+
+.hide{ display:none;}
+.show{ display:block;}
+
+
+nav{
+	background-color:color("colorsPalette", "clr-3");
+	@include box-shadow( (rgba(153, 153, 153, 0.4) 0 0 25px));
+	padding:10px;
+}
+.navigation{
+	.logo{
+		height:40px;
+	}
+	li{
+		display:inline-block;
+		line-height:30px;
+		padding:0 10px;
+	}
+}
+.slider{
+	height:420px;
+	border:1px solid #000;
+}
+
+.section-title{
+	h3{	
+		font-size:21px;
+	}
+}
+
+
+.marT100{
+	margin-top:100px;
+}
+.marT30{
+	margin-top:30px;
+}
+
+.marT25{
+	margin-top:25px;
+}
+
+.marT55{
+	margin-top:55px;
+}
+.marT80{
+	margin-top:80px;
+}
+.marT-65{
+	margin-top:-65px;
+}
+.marT-52{
+	margin-top:-52px;
+}
+
+.nopadding{
+	padding:0;
+}
+.paddr0{ padding-right:0;}
+.content-block{
+	padding: 0 0 50px;
+	h3{ margin:0 0 20px;}
+	ul{
+		li{display:block; float:left; width:100%;
+			img{float:left;}
+			.meta{
+				float:left; line-height:17px; font-size:12px;
+			}
+			.metaName, .metaAge, .metaTime{ display:block;}
+			.metaName{ font-weight:600;}
+		}
+	}
+
+
+}

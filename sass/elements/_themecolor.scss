@@ -1,0 +1,53 @@
+$colorsPalette: (
+  "base":   #333333,
+  "clr-1":  #000000,
+  "clr-2":  #ff5050,
+  "clr-3":  #ffffff,
+  "clr-4":  #f2f5f7,
+  "clr-5": #cccccc,
+  "clr-6": #909090,
+  "clr-7": #202020,
+  "clr-8": #fa4141,
+  "clr-9": #ff5050
+);
+
+$black:#000;
+$white:#fff;
+
+$colors: (
+  "colorsPalette": $colorsPalette
+);
+
+//Function for generating custom color class for bg and text
+@each $color_name, $color in $colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" {
+      .#{$color_name} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text {
+        color: $color_value !important;
+      }
+    }
+    @else {
+      .#{$color_name}.#{$color_type} {
+        background-color: $color_value !important;
+      }      
+      .#{$color_name}-text.text-#{$color_type} {
+        color: $color_value !important;
+      }
+    }
+  }
+}
+
+// Function for using variable in sass
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  //@warn "Unknown `#{name}` in $colors.";
+  @return null;
+}
