@@ -15,7 +15,9 @@
 
 }
 
-
+#movieCategory .mix{
+	display:none;
+}
 .bgColor{
 	background-color:color("colorsPalette", "clr-4");
 }
@@ -110,6 +112,8 @@ nav{
 	background-color:color("colorsPalette", "clr-3");
 	@include box-shadow( (rgba(153, 153, 153, 0.4) 0 0 25px));
 	padding:10px;
+	position:relative;
+	z-index:10;
 }
 .navigation{
 	.logo{
@@ -123,7 +127,6 @@ nav{
 }
 .slider{
 	height:420px;
-	border:1px solid #000;
 }
 
 .section-title{
@@ -176,4 +179,17 @@ nav{
 	}
 
 
+}
+
+
+.movieSlider{
+	.moviePoster{ 
+		position:absolute;
+		left:0;
+		top:0;
+	}
+	.movieCaret{
+		min-height:330px;
+	}
+	.box-std{ padding:25px;}
 }
