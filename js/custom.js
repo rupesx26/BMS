@@ -1,8 +1,8 @@
 
-var myLists = "";
+var movieList = "";
 
 $(document).ready(function() {
-
+//Movie Box from JSON
 var catDiv = $('.categories');
 
  $.ajax({
@@ -10,10 +10,10 @@ var catDiv = $('.categories');
  type:'get',
  dataType:'json',
  success:function(data){
- 	var myLists = data;
-	 for(var key in myLists){
+ 	var movieList = data;
+	 for(var key in movieList){
 	            var attrName = key;
-	            var attrValue = myLists[key];
+	            var attrValue = movieList[key];
 	            //console.log(attrValue.EventId);
 		 		var movieCaretBox = $('<div />', {
 	                 "class" : 'col-md-6 movieCaretBox'  
@@ -142,7 +142,8 @@ var catDiv = $('.categories');
   	}
  });
 
-//$('#movieCategory').mixItUp();
+
+//Slider 
 $('.slider-nav').slick({
 	slidesToShow: 2,
   slidesToScroll: 1,
@@ -152,7 +153,7 @@ $('.slider-nav').slick({
     {
       breakpoint: 768,
       settings: {
-        arrows: false,
+        
         centerMode: true,
         slidesToShow: 3
       }
@@ -160,7 +161,7 @@ $('.slider-nav').slick({
     {
       breakpoint: 480,
       settings: {
-        arrows: false,
+        
         centerMode: true,
         slidesToShow: 1
       }
@@ -169,5 +170,42 @@ $('.slider-nav').slick({
 });
 
 
+shuffleColors();	
+navigation();
 
 });
+
+
+function navigation(){
+	$("#nav-mobile").html($("#nav-desk").html());
+	$("#nav-mobile li a").click(function(){
+    $('#nav-trigger').removeClass('open active');
+    $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(300);
+    $(".headerMenu").removeClass('mob-nav');
+  });
+  $("#nav-trigger").click(function(){
+      if ($("#nav-mobile ul").hasClass("expanded")) {
+        $("#nav-mobile ul.expanded").removeClass("expanded").slideUp(300);
+        $(this).removeClass("open");
+        $(this).removeClass("active");
+        $(".headerMenu").removeClass('mob-nav');
+      } else {
+        $("#nav-mobile ul").addClass("expanded").slideDown(300);
+        $(this).addClass("open");
+        $(this).addClass("active");
+        $(".headerMenu").addClass('mob-nav');
+      }
+});
+}
+
+function shuffleColors() {
+    var colors = ["bg-1", "bg-2", "bg-3"];
+    var randomColor = Math.floor(Math.random()*colors.length);
+    var contentBlock = $('.mvSlide'); 
+    for (var i = 0; i < contentBlock.length; i++) {
+        $(".mvSlide").each(function () {
+	    $(this).addClass(colors[randomColor]); // assign the color
+	    randomColor = (randomColor + 1) % colors.length; // step to the next color; this will loop to the beginning thanks to mod
+	});
+ }
+}

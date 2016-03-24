@@ -11,8 +11,8 @@ $colorsPalette: (
   "clr-9": #ff5050
 );
 
-$black:#000;
-$white:#fff;
+$black:#000000;
+$white:#ffffff;
 
 $colors: (
   "colorsPalette": $colorsPalette
@@ -51,3 +51,30 @@ $colors: (
   //@warn "Unknown `#{name}` in $colors.";
   @return null;
 }
+
+
+
+.bg-1{
+  background-color:#fdecca;
+
+  .badge-light-1{ color: lighten($black, 60%);}
+  color:lighten($black, 60%);
+  .movieTitle{color:color("colorsPalette", "base");}
+}
+
+.bg-2{
+  background-color:#932721;
+  .movieVotes span{color: color("colorsPalette", "clr-3");}
+  .movieTitle{color:color("colorsPalette", "clr-3");}
+  color:rgba(255,255,255,.75);
+
+}
+
+.bg-3{
+  background-color:#49c7b9;
+  .movieVotes span{color: color("colorsPalette", "clr-3");}
+ .movieTitle{color:color("colorsPalette", "clr-3");}
+  color:rgba(255,255,255,.75);
+}
+
+

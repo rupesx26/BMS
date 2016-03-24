@@ -16,7 +16,7 @@
 .badge-light-1{
 	@extend .badge;
 }
-.badge-light-1{ color: color("colorsPalette", "base"); background-color: rgba(($black), 0.1); border:0;}
+.badge-light-1{ color: color("colorsPalette", "clr-3"); background-color: rgba(($black), 0.1); border:0;}
 
 .badge-dark-1{
 	@extend .badge;
@@ -28,6 +28,9 @@
 }
 .badge-light-2{ color: color("colorsPalette", "base"); background-color: color("colorsPalette", "clr-3");}
 
+
+.badge-md{ font-size:12px; padding:8px 10px;}
+.badge-lg{font-size:15px; padding:7px 8px;}
 
 .btn{
 	display:inline-block;
