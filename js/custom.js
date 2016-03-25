@@ -16,7 +16,7 @@ var catDiv = $('.categories');
 	            var attrValue = movieList[key];
 	            //console.log(attrValue.EventId);
 		 		var movieCaretBox = $('<div />', {
-	                 "class" : 'col-md-6 movieCaretBox'  
+	                 "class" : 'col-md-6 movieCaretBox mix'  
 	              });
 
 	             var movieCaret = $('<div />', {
@@ -146,36 +146,43 @@ var catDiv = $('.categories');
 //Slider 
 $('.slider-nav').slick({
 	slidesToShow: 2,
-  slidesToScroll: 1,
-  centerMode: true,
-  focusOnSelect: true,
+   	slidesToScroll: 1,
+  	centerMode: true,
+  	focusOnSelect: true,
     responsive: [
     {
       breakpoint: 768,
-      settings: {
-        
+      settings: { 
         centerMode: true,
-        slidesToShow: 3
+        slidesToShow: 2,
+   		slidesToScroll: 1
       }
     },
     {
       breakpoint: 480,
       settings: {
-        
         centerMode: true,
-        slidesToShow: 1
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
     }
   ]
 });
 
+var $filterSelect = $('#FilterSelect'),
+	$container = $('movieCategory')
+$container.mixItUp();
+  
+  $filterSelect.on('change', function(){
+    $container.mixItUp('filter', this.value);
+  });
 
 shuffleColors();	
 navigation();
 
 });
 
-
+//navigation
 function navigation(){
 	$("#nav-mobile").html($("#nav-desk").html());
 	$("#nav-mobile li a").click(function(){
@@ -198,6 +205,7 @@ function navigation(){
 });
 }
 
+//Random BG color
 function shuffleColors() {
     var colors = ["bg-1", "bg-2", "bg-3"];
     var randomColor = Math.floor(Math.random()*colors.length);

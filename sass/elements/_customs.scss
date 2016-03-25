@@ -65,7 +65,7 @@
 //MovieBox Style 
 
 #movieCategory .mix{
-	display:none;
+
 }
 
 .moviePoster{
@@ -157,18 +157,53 @@
 
 .movieSlider{
 	.moviePoster{ 
-		position:absolute;
-		left:0;
-		top:0;
+		margin:20px 0 0;
 	}
 	.movieCaret{
-		min-height:330px;
+		height:325px;
 	}
-	.box-std{ padding:25px;}
+	.box-std{ padding:25px;}	
+}
 
+.filterBar{display:block;}
+	.filterMobile{ display:none}
 
+@media (max-width: $screen-sm) {
+.movieSlider{
+	.moviePoster{
+		&.lg {
+	    margin: 0 auto;
+	    width: 155px;
+		}
+	}
+	.movieCaret{
+		height:auto;
+		.bookNowBtn{
+			position:static;
+			text-align:center;
+			margin:25px 0 0;
+		}
+	}
+  }
 
-	
+  .movieCaretBox {
+  	.movieCaret{
+		height:auto;
+		.bookNowBtn{
+			position:static;
+			text-align:center;
+			margin:25px 0 0;
+		}
+	}
+	.moviePoster{ margin-right:auto; margin-left:auto;}
+  }
+	.sidebar{
+		margin:0 0 30px;
+	}
+
+	.filterBar{display:none;}
+	.filterMobile{ display:block}
+
 }
 
 .slick-list{
@@ -194,22 +229,22 @@ nav{
 	}
 
 	.navbar-toggle{
-	float: right;
-    text-align: center;
-    z-index: 1;
-     cursor: pointer;
-    height: 40px;
-    margin: 20px 10px 0;
-    padding: 5px 0;
-    width: 35px;
-    display:none;
-			span {
-		    background-color: #000;
-		    display: block;
-		    height: 3px;
-		    margin: 6px auto;
-		    width: 28px;
-		}
+		float: right;
+	    text-align: center;
+	    z-index: 1;
+	    cursor: pointer;
+	    height: 40px;
+	    margin: 20px 10px 0;
+	    padding: 5px 0;
+	    width: 35px;
+	    display:none;
+				span {
+			    background-color: #000;
+			    display: block;
+			    height: 3px;
+			    margin: 6px auto;
+			    width: 28px;
+			}
 
 		&.active{
 			span{position:absolute;left:0;right:0;top:13px;background-color:#000;
@@ -322,6 +357,9 @@ nav{
 }
 .marT80{
 	margin-top:80px;
+}
+.marT35{
+	margin-top:35px;
 }
 .marT-65{
 	margin-top:-65px;
