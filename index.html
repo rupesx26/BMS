@@ -8,19 +8,18 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-
-
 	<div class="pageWRapper bgColor clearfix">
+	<!--header-->
 		<header>
 			<nav class="headerMenu">
 				<div class="container-fluid">
 					<div class="nav-header"><h1> <a href="" class="logo"> <img src="images/logo.gif" class="img-responsive"> </a> </h1></div>
 
 					<div class="navbar-toggle" id="nav-trigger">
-			          <span></span>
-			          <span></span>
-			          <span></span>
-			        </div>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 
 					<div class="navigation" id="nav-desk">
 						<ul>
@@ -31,13 +30,13 @@
 							<li><a href="">Sports</a></li>
 						</ul>
 					</div>
-
 					<div id="nav-mobile" class="navigation"></div>
-
 				</div>
 			</nav>
 		</header>
+		<!--/ header-->
 
+		<!--slider-->
 		<section class="clearfix">
 			<div class="sliderWrap">
 				
@@ -65,13 +64,15 @@
 
 			</div>
 		</section>
-
+<!--/slider-->
+<!--content-->
 		<section class="clearfix marT100">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3">
+					<!--sidebar-->
 						<div class="sidebar clearfix">
-							<div class="content-block clearfix">
+							<div class="content-block clearfix col-sm-6 col-md-12">
 								<div class="section-title"><h3>Birthday this week</h3></div>
 								<ul class="birthdayList">
 									<li>
@@ -106,7 +107,7 @@
 									</li>
 								</ul>
 							</div>
-							<div class="content-block">
+							<div class="content-block col-sm-6 col-md-12">
 								<div class="section-title"><h3>Trailers this week</h3></div>
 								<ul class="trailersList">
 									<li>
@@ -150,39 +151,43 @@
 								</ul>
 							</div>
 						</div>
+						<!--/sidebar-->
 					</div>
 					<div class="col-md-9">
 						<div class="content paddb100">
+						<!--filter-->
 							<div class="row">
-								<div class="topMenuBar">
-									<div class="section-title pull-left"><h3>Filter by language</h3></div>
-									<div class="filterBar">
-										<div class="filter active" data-filter="all">All Language</div>
-										<div class="filter" data-filter=".English">English</div>
-										<div class="filter" data-filter=".Hindi">Hindi</div>
-										<div class="filter" data-filter=".Marathi">Marathi</div>
-										<div class="filter" data-filter=".Tamil">Tamil</div>
-										<div class="filter" data-filter=".Telgu">Telgu</div>
-										<div class="filter" data-filter=".Kanada">Kanada</div>
+								<div class="col-sm-12">
+									<div class="topMenuBar">
+										<div class="section-title pull-left"><h3>Filter by language</h3></div>
+										<div class="filterBar">
+											<div class="filter active" data-filter="all">All Language</div>
+											<div class="filter" data-filter=".English">English</div>
+											<div class="filter" data-filter=".Hindi">Hindi</div>
+											<div class="filter" data-filter=".Marathi">Marathi</div>
+											<div class="filter" data-filter=".Tamil">Tamil</div>
+											<div class="filter" data-filter=".Telgu">Telgu</div>
+											<div class="filter" data-filter=".Kanada">Kanada</div>
+										</div>
+										
+										<div class="filterMobile">
+											<select id="FilterSelect">
+												<option value="all">All</option>
+												<option value=".English">English</option>
+												<option value=".Hindi">Hindi</option>
+												<option value=".Marathi">Marathi</option>
+												<option value=".Tamil">Tamil</option>
+												<option value=".Telgu">Telgu</option>
+												<option value=".Kanada">Kanada</option>
+											</select>
+										</div>
 									</div>
-									
-									<div class="filterMobile">
-										<select id="FilterSelect">
-										    <option value="all">All</option>
-										    <option value=".English">English</option>
-										    <option value=".Hindi">Hindi</option>
-										    <option value=".Marathi">Marathi</option>
-										    <option value=".Tamil">Tamil</option>
-										    <option value=".Telgu">Telgu</option>
-										    <option value=".Kanada">Kanada</option>
-										  </select>
-									</div>
-
 								</div>
 							</div>
 							<div class="row">
 								<div class="categories" id="movieCategory"></div>
 							</div>
+							<!--/filter-->
 						</div>
 					</div>
 				</div>

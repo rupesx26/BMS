@@ -4,6 +4,9 @@ var movieList = "";
 $(document).ready(function() {
 //Movie Box from JSON
 var catDiv = $('.categories');
+var movieSlider = $('.movieSlider');
+
+
 
  $.ajax({
  url:'js/movie-list.json',
@@ -16,7 +19,7 @@ var catDiv = $('.categories');
 	            var attrValue = movieList[key];
 	            //console.log(attrValue.EventId);
 		 		var movieCaretBox = $('<div />', {
-	                 "class" : 'col-md-6 movieCaretBox mix'  
+	                 "class" : 'col-md-6 col-sm-6 movieCaretBox mix'  
 	              });
 
 	             var movieCaret = $('<div />', {
@@ -103,16 +106,16 @@ var catDiv = $('.categories');
 
 	             bookNowBtn.html('<a href="" class="btn btn-red shadow roundBtn">Book Now</a>');
 
+	             //Filter Classes added to movieCaret
 	             var fitterKey = movieLang;
 
-	             for(var i = 0; i<fitterKey.length; i++){
-    				fitterKey[i] = '.' + fitterKey[i];
+	             for(var fKey = 0; fKey<fitterKey.length; fKey++){
+    					fitterKey[fKey];
 					}
-
 				var catLangStr = fitterKey.join(' ');	
 				console.log(catLangStr)	
 
-	             $('.movieCaretBox').attr("data-filter", catLangStr);
+
             
 	             movieTime.html(movieTimeHTML) // movieTimeHTML html 
 	             startRating.html(startHTML)  // Starrating html 
@@ -126,6 +129,7 @@ var catDiv = $('.categories');
 	             movieCaret.append(colLeft); // Append colLeft div col-md-4
 	     
 	             movieCaret.append(colRight); // Append colRight div col-md-8
+
 	             colRight.append(movieLanguage); // Append movieLanguage div
 	             colRight.append(startRating); // Append startRating div
 	             colRight.append(movieTime); // Append movieTime div
@@ -135,7 +139,7 @@ var catDiv = $('.categories');
 	             movieVotes.append(likes); // Append like div
 	             movieVotes.append(userVotes); // Append voter div
 	             movieCaret.append(bookNowBtn); // Append bookNowBtn div
-
+	             movieCaretBox.addClass(catLangStr);
 	             movieCaretBox.append(movieCaret); // Append movieCaret div
               	 catDiv.append(movieCaretBox); // Append movieCaretBox div
 		}
@@ -170,7 +174,7 @@ $('.slider-nav').slick({
 });
 
 var $filterSelect = $('#FilterSelect'),
-	$container = $('movieCategory')
+	$container = $('.categories')
 $container.mixItUp();
   
   $filterSelect.on('change', function(){

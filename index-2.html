@@ -65,16 +65,8 @@ button + label{
   -webkit-backface-visibility: hidden;
 }
 
-.container:after{
-  content: '';
+.container .mix{
   display: inline-block;
-  width: 100%;
-}
-
-.container .mix,
-.container .gap{
-  display: inline-block;
-  width: 49%;
 }
 
 .container .mix{
@@ -84,43 +76,9 @@ button + label{
   display: none;
 }
 
-.container .mix.category-1{
-  border-top: 2px solid limegreen;
-}
 
-.container .mix.category-2{
-  border-top: 2px solid yellow;
-}
 
-.container .mix:after{
-  content: attr(data-myorder);
-  color: white;
-  font-size: 16px;
-  display: inline-block;
-  vertical-align: top;
-  padding: 4% 6%;
-  font-weight: 700;
-}
 
-.container .mix:before{
-  content: '';
-  display: inline-block;
-  padding-top: 60%;
-}
-
-@media all and (min-width: 420px){
-  .container .mix,
-  .container .gap{
-    width: 32%;
-  }
-}
-
-@media all and (min-width: 640px){
-  .container .mix,
-  .container .gap{
-    width: 23.5%;
-  }
-}
     </style>
 </head>
 <body>
@@ -132,11 +90,22 @@ button + label{
 <div class="controls">
   <label>Filter:</label>
   
-  <select id="FilterSelect-">
+  <select id="FilterSelect-csfs">
     <option value="all">All</option>
     <option value=".category-1">Category 1</option>
     <option value=".category-2">Category 2</option>
   </select>
+
+
+<div class="filterBar">
+                                        <div class="filter active" data-filter="all">All Language</div>
+                                        <div class="filter" data-filter=".English">English</div>
+                                        <div class="filter" data-filter=".Hindi">Hindi</div>
+                                        <div class="filter" data-filter=".Marathi">Marathi</div>
+                                        <div class="filter" data-filter=".Tamil">Tamil</div>
+                                        <div class="filter" data-filter=".Telgu">Telgu</div>
+                                        <div class="filter" data-filter=".Kanada">Kanada</div>
+                                    </div>
 
   <select id="FilterSelect">
                                             <option value="all">All</option>
@@ -156,7 +125,211 @@ button + label{
   </select>
 </div>
 <div id="Container" class="container">
-  <div id="movieCategory" class="categories"><div class="col-md-6 movieCaretBox mix" data-filter=".Hindi .Marathi"><div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80"><div class="col-md-4 nopadding"><div class="moviePoster md marT-52"><img class="img-responsive" src="images/ET0000001.jpg"><div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div><div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div></div></div><div class="col-md-8 paddr0"><div class="movieTitle">Fitoor</div><div class="movieLanguage colorsPalette-text text-clr-6">Hindi | English</div><div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div><div class="movieTime colorsPalette-text text-clr-6"><span>R | 1h 40min</span></div><div class="movieCat marT25"><span class="badge-light-2">Action</span><span class="badge-light-2">Romance</span><span class="badge-light-2">Adventure</span></div><div class="movieVotes"><div class="likes"><img src="images/heart.png"> <span>96%</span></div><div class="votes colorsPalette-text text-clr-6"><div class="votes colorsPalette-text text-clr-6"> 66,000 Votes</div></div></div></div><div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div></div></div><div class="col-md-6 movieCaretBox mix" data-filter=".Hindi .Marathi"><div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80"><div class="col-md-4 nopadding"><div class="moviePoster md marT-52"><img class="img-responsive" src="images/ET0000002.jpg"><div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div><div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div></div></div><div class="col-md-8 paddr0"><div class="movieTitle">Loveshuda</div><div class="movieLanguage colorsPalette-text text-clr-6">Hindi</div><div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div><div class="movieTime colorsPalette-text text-clr-6"><span>U | 1h 30min</span></div><div class="movieCat marT25"><span class="badge-light-2">Romance</span><span class="badge-light-2">Adventure</span></div><div class="movieVotes"><div class="likes"><img src="images/heart.png"> <span>56%</span></div><div class="votes colorsPalette-text text-clr-6"><div class="votes colorsPalette-text text-clr-6"> 36,000 Votes</div></div></div></div><div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div></div></div><div class="col-md-6 movieCaretBox mix" data-filter=".Hindi .Marathi"><div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80"><div class="col-md-4 nopadding"><div class="moviePoster md marT-52"><img class="img-responsive" src="images/ET0000003.jpg"><div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div><div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div></div></div><div class="col-md-8 paddr0"><div class="movieTitle">Rythm</div><div class="movieLanguage colorsPalette-text text-clr-6">Hindi | Telgu</div><div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div><div class="movieTime colorsPalette-text text-clr-6"><span>R | 1h 10min</span></div><div class="movieCat marT25"><span class="badge-light-2">Action</span><span class="badge-light-2">Romance</span></div><div class="movieVotes"><div class="likes"><img src="images/heart.png"> <span>62%</span></div><div class="votes colorsPalette-text text-clr-6"><div class="votes colorsPalette-text text-clr-6"> 76,000 Votes</div></div></div></div><div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div></div></div><div class="col-md-6 movieCaretBox mix" data-filter=".Hindi .Marathi"><div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80"><div class="col-md-4 nopadding"><div class="moviePoster md marT-52"><img class="img-responsive" src="images/ET0000004.jpg"><div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div><div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div></div></div><div class="col-md-8 paddr0"><div class="movieTitle">Kung Fu Panda</div><div class="movieLanguage colorsPalette-text text-clr-6">English</div><div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div><div class="movieTime colorsPalette-text text-clr-6"><span>R | 1h 40min</span></div><div class="movieCat marT25"><span class="badge-light-2">Action</span><span class="badge-light-2">Adventure</span></div><div class="movieVotes"><div class="likes"><img src="images/heart.png"> <span>90%</span></div><div class="votes colorsPalette-text text-clr-6"><div class="votes colorsPalette-text text-clr-6"> 90,000 Votes</div></div></div></div><div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div></div></div><div class="col-md-6 movieCaretBox mix" data-filter=".Hindi .Marathi"><div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80"><div class="col-md-4 nopadding"><div class="moviePoster md marT-52"><img class="img-responsive" src="images/ET0000005.jpg"><div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div><div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div></div></div><div class="col-md-8 paddr0"><div class="movieTitle">Vvitch</div><div class="movieLanguage colorsPalette-text text-clr-6">English</div><div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div><div class="movieTime colorsPalette-text text-clr-6"><span>R | 1h</span></div><div class="movieCat marT25"><span class="badge-light-2">Action</span><span class="badge-light-2">Adventure</span></div><div class="movieVotes"><div class="likes"><img src="images/heart.png"> <span>88%</span></div><div class="votes colorsPalette-text text-clr-6"><div class="votes colorsPalette-text text-clr-6"> 80,000 Votes</div></div></div></div><div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div></div></div><div class="col-md-6 movieCaretBox mix" data-filter=".Hindi .Marathi"><div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80"><div class="col-md-4 nopadding"><div class="moviePoster md marT-52"><img class="img-responsive" src="images/ET0000006.jpg"><div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div><div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div></div></div><div class="col-md-8 paddr0"><div class="movieTitle">Tintin</div><div class="movieLanguage colorsPalette-text text-clr-6">Tamil | English</div><div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div><div class="movieTime colorsPalette-text text-clr-6"><span>U | 1h 40min</span></div><div class="movieCat marT25"><span class="badge-light-2">Action</span><span class="badge-light-2">Romance</span><span class="badge-light-2">Adventure</span></div><div class="movieVotes"><div class="likes"><img src="images/heart.png"> <span>96%</span></div><div class="votes colorsPalette-text text-clr-6"><div class="votes colorsPalette-text text-clr-6"> 66,000 Votes</div></div></div></div><div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div></div></div><div class="col-md-6 movieCaretBox mix" data-filter=".Hindi .Marathi"><div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80"><div class="col-md-4 nopadding"><div class="moviePoster md marT-52"><img class="img-responsive" src="images/ET0000007.jpg"><div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div><div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div></div></div><div class="col-md-8 paddr0"><div class="movieTitle">April 2001</div><div class="movieLanguage colorsPalette-text text-clr-6">Kanada | Hindi</div><div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div><div class="movieTime colorsPalette-text text-clr-6"><span>R | 1h 10min</span></div><div class="movieCat marT25"><span class="badge-light-2">Romance</span><span class="badge-light-2">Adventure</span></div><div class="movieVotes"><div class="likes"><img src="images/heart.png"> <span>46%</span></div><div class="votes colorsPalette-text text-clr-6"><div class="votes colorsPalette-text text-clr-6"> 61,000 Votes</div></div></div></div><div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div></div></div><div class="col-md-6 movieCaretBox mix"><div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80"><div class="col-md-4 nopadding"><div class="moviePoster md marT-52"><img class="img-responsive" src="images/ET0000008.jpg"><div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div><div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div></div></div><div class="col-md-8 paddr0"><div class="movieTitle">Bajirao Mastani</div><div class="movieLanguage colorsPalette-text text-clr-6">Hindi | Marathi</div><div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div><div class="movieTime colorsPalette-text text-clr-6"><span>U | 2h 10min</span></div><div class="movieCat marT25"><span class="badge-light-2">Action</span><span class="badge-light-2">Romance</span><span class="badge-light-2">Adventure</span></div><div class="movieVotes"><div class="likes"><img src="images/heart.png"> <span>90%</span></div><div class="votes colorsPalette-text text-clr-6"><div class="votes colorsPalette-text text-clr-6"> 89,000 Votes</div></div></div></div><div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div></div></div></div>
+  
+
+<div id="movieCategory" class="categories">
+   <div class="col-md-6 movieCaretBox mix" data-filter=".Hindi .Marathi .English">
+      <div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80">
+         <div class="col-md-4 nopadding">
+            <div class="moviePoster md marT-52">
+               <img class="img-responsive" src="images/ET0000001.jpg">
+               <div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div>
+               <div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div>
+            </div>
+         </div>
+         <div class="col-md-8 paddr0">
+            <div class="movieTitle">Fitoor</div>
+            <div class="movieLanguage colorsPalette-text text-clr-6">Hindi | English</div>
+            <div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div>
+            <div class="movieTime colorsPalette-text text-clr-6"><span>R | 1h 40min</span></div>
+            <div class="movieCat marT25"><span class="badge-light-2">Action</span><span class="badge-light-2">Romance</span><span class="badge-light-2">Adventure</span></div>
+            <div class="movieVotes">
+               <div class="likes"><img src="images/heart.png"> <span>96%</span></div>
+               <div class="votes colorsPalette-text text-clr-6">
+                  <div class="votes colorsPalette-text text-clr-6"> 66,000 Votes</div>
+               </div>
+            </div>
+         </div>
+         <div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div>
+      </div>
+   </div>
+   <div class="col-md-6 movieCaretBox mix" data-filter=".Hindi .Marathi">
+      <div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80">
+         <div class="col-md-4 nopadding">
+            <div class="moviePoster md marT-52">
+               <img class="img-responsive" src="images/ET0000002.jpg">
+               <div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div>
+               <div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div>
+            </div>
+         </div>
+         <div class="col-md-8 paddr0">
+            <div class="movieTitle">Loveshuda</div>
+            <div class="movieLanguage colorsPalette-text text-clr-6">Hindi</div>
+            <div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div>
+            <div class="movieTime colorsPalette-text text-clr-6"><span>U | 1h 30min</span></div>
+            <div class="movieCat marT25"><span class="badge-light-2">Romance</span><span class="badge-light-2">Adventure</span></div>
+            <div class="movieVotes">
+               <div class="likes"><img src="images/heart.png"> <span>56%</span></div>
+               <div class="votes colorsPalette-text text-clr-6">
+                  <div class="votes colorsPalette-text text-clr-6"> 36,000 Votes</div>
+               </div>
+            </div>
+         </div>
+         <div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div>
+      </div>
+   </div>
+   <div class="col-md-6 movieCaretBox mix Hindi Marathi" data-filter=".Hindi .Marathi">
+      <div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80">
+         <div class="col-md-4 nopadding">
+            <div class="moviePoster md marT-52">
+               <img class="img-responsive" src="images/ET0000003.jpg">
+               <div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div>
+               <div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div>
+            </div>
+         </div>
+         <div class="col-md-8 paddr0">
+            <div class="movieTitle">Rythm</div>
+            <div class="movieLanguage colorsPalette-text text-clr-6">Hindi | Telgu</div>
+            <div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div>
+            <div class="movieTime colorsPalette-text text-clr-6"><span>R | 1h 10min</span></div>
+            <div class="movieCat marT25"><span class="badge-light-2">Action</span><span class="badge-light-2">Romance</span></div>
+            <div class="movieVotes">
+               <div class="likes"><img src="images/heart.png"> <span>62%</span></div>
+               <div class="votes colorsPalette-text text-clr-6">
+                  <div class="votes colorsPalette-text text-clr-6"> 76,000 Votes</div>
+               </div>
+            </div>
+         </div>
+         <div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div>
+      </div>
+   </div>
+   <div class="col-md-6 movieCaretBox mix" data-filter=".Hindi .Marathi">
+      <div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80">
+         <div class="col-md-4 nopadding">
+            <div class="moviePoster md marT-52">
+               <img class="img-responsive" src="images/ET0000004.jpg">
+               <div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div>
+               <div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div>
+            </div>
+         </div>
+         <div class="col-md-8 paddr0" data-filter=".English">
+            <div class="movieTitle">Kung Fu Panda</div>
+            <div class="movieLanguage colorsPalette-text text-clr-6">English</div>
+            <div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div>
+            <div class="movieTime colorsPalette-text text-clr-6"><span>R | 1h 40min</span></div>
+            <div class="movieCat marT25"><span class="badge-light-2">Action</span><span class="badge-light-2">Adventure</span></div>
+            <div class="movieVotes">
+               <div class="likes"><img src="images/heart.png"> <span>90%</span></div>
+               <div class="votes colorsPalette-text text-clr-6">
+                  <div class="votes colorsPalette-text text-clr-6"> 90,000 Votes</div>
+               </div>
+            </div>
+         </div>
+         <div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div>
+      </div>
+   </div>
+   <div class="col-md-6 movieCaretBox mix" data-filter=".English">
+      <div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80">
+         <div class="col-md-4 nopadding">
+            <div class="moviePoster md marT-52">
+               <img class="img-responsive" src="images/ET0000005.jpg">
+               <div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div>
+               <div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div>
+            </div>
+         </div>
+         <div class="col-md-8 paddr0">
+            <div class="movieTitle">Vvitch</div>
+            <div class="movieLanguage colorsPalette-text text-clr-6">English</div>
+            <div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div>
+            <div class="movieTime colorsPalette-text text-clr-6"><span>R | 1h</span></div>
+            <div class="movieCat marT25"><span class="badge-light-2">Action</span><span class="badge-light-2">Adventure</span></div>
+            <div class="movieVotes">
+               <div class="likes"><img src="images/heart.png"> <span>88%</span></div>
+               <div class="votes colorsPalette-text text-clr-6">
+                  <div class="votes colorsPalette-text text-clr-6"> 80,000 Votes</div>
+               </div>
+            </div>
+         </div>
+         <div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div>
+      </div>
+   </div>
+   <div class="col-md-6 movieCaretBox mix" data-filter=".Tamil .English">
+      <div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80">
+         <div class="col-md-4 nopadding">
+            <div class="moviePoster md marT-52">
+               <img class="img-responsive" src="images/ET0000006.jpg">
+               <div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div>
+               <div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div>
+            </div>
+         </div>
+         <div class="col-md-8 paddr0">
+            <div class="movieTitle">Tintin</div>
+            <div class="movieLanguage colorsPalette-text text-clr-6">Tamil | English</div>
+            <div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div>
+            <div class="movieTime colorsPalette-text text-clr-6"><span>U | 1h 40min</span></div>
+            <div class="movieCat marT25"><span class="badge-light-2">Action</span><span class="badge-light-2">Romance</span><span class="badge-light-2">Adventure</span></div>
+            <div class="movieVotes">
+               <div class="likes"><img src="images/heart.png"> <span>96%</span></div>
+               <div class="votes colorsPalette-text text-clr-6">
+                  <div class="votes colorsPalette-text text-clr-6"> 66,000 Votes</div>
+               </div>
+            </div>
+         </div>
+         <div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div>
+      </div>
+   </div>
+   <div class="col-md-6 movieCaretBox mix" data-filter=".Hindi .Kanada">
+      <div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80">
+         <div class="col-md-4 nopadding">
+            <div class="moviePoster md marT-52">
+               <img class="img-responsive" src="images/ET0000007.jpg">
+               <div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div>
+               <div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div>
+            </div>
+         </div>
+         <div class="col-md-8 paddr0">
+            <div class="movieTitle">April 2001</div>
+            <div class="movieLanguage colorsPalette-text text-clr-6">Kanada | Hindi</div>
+            <div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div>
+            <div class="movieTime colorsPalette-text text-clr-6"><span>R | 1h 10min</span></div>
+            <div class="movieCat marT25"><span class="badge-light-2">Romance</span><span class="badge-light-2">Adventure</span></div>
+            <div class="movieVotes">
+               <div class="likes"><img src="images/heart.png"> <span>46%</span></div>
+               <div class="votes colorsPalette-text text-clr-6">
+                  <div class="votes colorsPalette-text text-clr-6"> 61,000 Votes</div>
+               </div>
+            </div>
+         </div>
+         <div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div>
+      </div>
+   </div>
+   <div class="col-md-6 movieCaretBox mix" data-filter=".Hindi .Marathi">
+      <div class="movieCaret box-std shadow2x clearfix roundBox colorsPalette clr-3 marT80">
+         <div class="col-md-4 nopadding">
+            <div class="moviePoster md marT-52">
+               <img class="img-responsive" src="images/ET0000008.jpg">
+               <div class="movieCast"><span class="castCircle"><img src="images/actor-1.png"></span><span class="castCircle"><img src="images/actor-2.png"></span><span class="castCircle"><img src="images/actor-3.png"></span><span class="castCircle"><img src="images/actor-4.png"></span><span class="castCircle"><img src="images/actor-5.png"></span></div>
+               <div class="frndsGoing colorsPalette-text text-clr-6">Clark, kim &amp; <span class="nof">7</span> other are going!</div>
+            </div>
+         </div>
+         <div class="col-md-8 paddr0">
+            <div class="movieTitle">Bajirao Mastani</div>
+            <div class="movieLanguage colorsPalette-text text-clr-6">Hindi | Marathi</div>
+            <div class="startRating colorsPalette-text text-clr-6"><span class="rating"></span> <span> Critics Rating</span></div>
+            <div class="movieTime colorsPalette-text text-clr-6"><span>U | 2h 10min</span></div>
+            <div class="movieCat marT25"><span class="badge-light-2">Action</span><span class="badge-light-2">Romance</span><span class="badge-light-2">Adventure</span></div>
+            <div class="movieVotes">
+               <div class="likes"><img src="images/heart.png"> <span>90%</span></div>
+               <div class="votes colorsPalette-text text-clr-6">
+                  <div class="votes colorsPalette-text text-clr-6"> 89,000 Votes</div>
+               </div>
+            </div>
+         </div>
+         <div class="bookNowBtn"><a class="btn btn-red shadow roundBtn" href="">Book Now</a></div>
+      </div>
+   </div>
+</div>
+
 </div>
 
 

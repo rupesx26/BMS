@@ -64,8 +64,17 @@
 
 //MovieBox Style 
 
-#movieCategory .mix{
-
+.categories{
+	-webkit-backface-visibility: hidden;
+	&.fail{
+		.mix{ display:block}
+	}
+	.mix{
+		display:inline-block;
+	}
+	.mix{
+		display:none;
+	}
 }
 
 .moviePoster{
@@ -202,15 +211,38 @@
 	}
 
 	.filterBar{display:none;}
-	.filterMobile{ display:block}
+	.filterMobile{ display:block; float:right; margin:10px 0;}
+	
 
+}
+
+@media (max-width:$screen-xs){
+	.categories{ 
+		.mix{
+			width:100%;
+		}
+		}
 }
 
 .slick-list{
 	min-height:380px;
 }
 .slick-prev{
-	z-index:1
+	z-index:1;
+	background:url('../images/arrowleft.png') no-repeat top left;
+	height:65px;
+	width:65px;
+	&:before{content:'';}
+	&:hover{background:url('../images/arrowleft.png') no-repeat top left;}
+}
+
+.slick-next{
+	z-index:1;
+	background:url('../images/arrowright.png') no-repeat top left;
+	height:65px;
+	width:65px;
+	&:before{content:'';}
+	&:hover{background:url('../images/arrowright.png') no-repeat top left;}
 }
 
 //Navigation
